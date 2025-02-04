@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 
+    Usiel Figueroa
+    Assignment 9.3: JavaScript Exercise - Part 1
+    CSD340-A311 Web Development with HTML and CSS
+    February 03, 2025
+   
+    References 
+    (n.d.). JavaScript Tutorial. W3schools.com. Retrieved February 3, 2025, from https://www.w3schools.com/js/default.asp 
+
+    (n.d.). Success Poems. FamilyFriendPoems. Retrieved February 3, 2025, from https://www.familyfriendpoems.com/collection/success-2/ 
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Usiel Figueroa">
+    <meta name="description" content="JavaScript Exercise with Span Elements">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <script>
+        // Declare four variables to store words
+        var word1 = "dedication";
+        var word2 = "effort";
+        var word3 = "perseverance";
+        var word4 = "success";
+
+        // Function to replace underscores with words
+        function replaceWord(id, word) {
+            document.getElementById(id).innerHTML = word;
+        }
+    </script>
+</head>
+<body>
+    <h1>Assignment 9.3: JavaScript - Part 1</h1>
+
+    <p>
+        Achieving greatness is not about talent alone—it is about <span id="word1">_________</span>.  
+        Those who push forward despite obstacles find themselves reaching new heights.  
+        No challenge is too great when determination fuels the journey.  
+    </p>
+
+    <p>
+        The road to mastery requires consistent <span id="word2">_________</span>.  
+        Whether learning a new skill, perfecting a craft, or overcoming personal struggles,  
+        small steps taken daily lead to remarkable progress over time.  
+    </p>
+
+    <p>
+        When failure strikes, only <span id="word3">_________</span> can keep the dream alive.  
+        True success is not measured by how many times we fall, but by how many times we rise again.  
+        With patience and persistence, the ultimate reward—<span id="word4">_________</span>—is within reach.  
+    </p>
+
+    <!-- Buttons to reveal words -->
+    <button type="button" onclick="replaceWord('word1', word1)">Reveal Word 1</button>
+    <button type="button" onclick="replaceWord('word2', word2)">Reveal Word 2</button>
+    <button type="button" onclick="replaceWord('word3', word3)">Reveal Word 3</button>
+    <button type="button" onclick="replaceWord('word4', word4)">Reveal Word 4</button>
+
+    <br><br>
+    <a href="../index.html">Back to Home</a>
+
+</body>
+</html>
+
