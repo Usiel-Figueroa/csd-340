@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- 
+    Usiel Figueroa 
+     Module 10.2 Assignment: JavaScript Exercise, Part 2 
+    CSD340-A311 Web Development with HTML and CSS 
+    February 09, 2025 
+    Link: https://github.com/Usiel-Figueroa/csd-340.git 
+    https://usiel-figueroa.github.io/csd-340/index.html
+    
+    References 
+    (n.d.). JavaScript Tutorial. W3schools.com. Retrieved February 9, 2025, from https://www.w3schools.com/js/default.asp 
+    -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Assignment 10.3: JavaScript - Part 2</h1>
+    <p>Click an image to interact with it! The first image transitions with sound between different images.</p>
+
+    <!-- Audio element for sound effect -->
+    <audio id="roarSound" src="JaguarSound.m4a" preload="auto"></audio>
+
+    <div>
+        <img id="image1" src="images/Illustratorimage.png" alt="Jaguar" onclick="cycleImageWithSound()">
+        <p id="caption1" class="caption">"Adobe Illustrator to Adobe Photoshop"</p>
+    </div>
+
+    <div>
+        <img id="image2" class="img2" src="images/UsielSunWindow.jpg" alt="Usiel Figueroa" onclick="expandAndMoveImage()">
+        <p id="caption2" class="caption">By: Usiel Figueroa</p>
+    </div>
+
+    <script>
+        let imageIndex = 0;
+        const images = ["images/Illustratorimage.png", "images/Photoshopimage.png"];
+
+        function cycleImageWithSound() {
+            let img = document.getElementById("image1");
+            let sound = document.getElementById("roarSound");
+
+            // Smooth fade-out transition
+            img.style.transition = "opacity 0.5s ease-in-out";
+            img.style.opacity = "0";
+
+            setTimeout(() => {
+                // Cycle through images
+                imageIndex = (imageIndex + 1) % images.length;
+                img.src = images[imageIndex];
+
+                // Wait for the image to load before fading back in
+                img.onload = function() {
+                    img.style.opacity = "1"; // Fade in
+                };
+            }, 500); // Wait for fade-out effect to finish
+
+            // Play sound effect
+            sound.play();
+        }
+
+        function expandAndMoveImage() {
+            let img = document.getElementById("image2");
+            img.classList.toggle("expanded");
+        }
+    </script>
+    <footer>
+        <p><a href="../index.html">Back to Portal</a></p>
+    </footer>
+</body>
+</html>

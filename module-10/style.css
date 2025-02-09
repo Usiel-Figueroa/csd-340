@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #f4f4f4;
+    padding: 20px;
+    margin: 0;
+}
+h1 {
+    color: #a9813d;
+}
+
+img {
+    width: 800px;
+    height: auto;
+    margin: 10px;
+    cursor: pointer;
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+img:hover {
+    opacity: 0.7;
+}
+
+.caption {
+    font-size: 16px;
+    color: #b69c77;
+    margin-top: 5px;
+    font-style: italic;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Move and Expand Image 2 */
+.img2 {
+    width: 150px;
+    border-radius: 50%;
+    position: relative;
+    transition: all 0.7s ease-in-out;
+}
+
+.expanded {
+    width: 300px !important;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+}
+
+/* Fade transition effect */
+#image1 {
+    transition: opacity 0.s ease-in-out;
+}
