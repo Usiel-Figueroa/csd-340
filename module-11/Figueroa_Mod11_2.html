@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--  
+
+    Usiel Figueroa  
+     Module 11.2 Assignment: JavaScript Exercise, Part 3  
+    CSD340-A311 Web Development with HTML and CSS  
+    February 16, 2025  
+
+    Link: https://github.com/Usiel-Figueroa/csd-340.git  
+    https://usiel-figueroa.github.io/csd-340/index.html 
+
+    References  
+    (n.d.). JavaScript Tutorial. W3schools.com. Retrieved February 16, 2025, from https://www.w3schools.com/js/default.asp  
+
+    --> 
+     <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSD 340 Web Development with HTML and CSS</title>
+        <script>
+            let items = []; // Array to store items
+
+            function addItem() {
+                let input = document.getElementById("inputBox").value;
+                if (input) {
+                    items.push(input);
+                    document.getElementById("inputBox").value = "";
+                    alert("Added: " + input);
+                } else {
+                    alert("Please enter a value before adding.");
+                }
+            }
+
+            function deleteLastItem() {
+                if (items.length > 0) {
+                    let removedItem = items.pop();
+                    alert("Deleted: " + removedItem);
+                } else {
+                    alert("No items to delete.");
+                }
+            }
+
+            function displayItems() {
+                let output = "";
+                if (items.length > 0) {
+                    for (let i = 0; i < items.length; i++) {
+                        output += `<li>${i + 1}. ${items[i]}</li>`;
+                    }
+                } else {
+                    output = "<li>No items in the list.</li>";
+                }
+                document.getElementById("itemList").innerHTML = output;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Assignment 11.2: JavaScript - Part 3</h1>
+        <h2>This is an interactive To Do List.</h2>
+        <p>Type in your first item in the text box, then click Add.</p>
+        <p>Click the Display button to see current items in the list.</p>
+        <p>Click on Delete Last Entry if you'd like to remove the last entry.</p>
+        <input type="text" id="inputBox" placeholder="Enter a value">
+        <button onclick="addItem()">Add</button>
+        <button onclick="deleteLastItem()">Delete Last Entry</button>
+        <button onclick="displayItems()">Display</button>
+        <ul id="itemList"></ul>
+        <footer>
+            <p><a href="../index.html">Back to Portal</a></p>
+        </footer>
+    </body>
+    </html>
+
