@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--  
+    Usiel Figueroa  
+    Module 12.2 Assignment: JavaScript Exercise, Part 4  
+    CSD340-A311 Web Development with HTML and CSS  
+    February 18, 2025  
+    Link: https://github.com/Usiel-Figueroa/csd-340.git  
+
+     References  
+
+    (n.d.). JavaScript Tutorial. W3schools.com. Retrieved February 18, 2025, from https://www.w3schools.com/js/default.asp 
+
+    (n.d.). CSS Lists. W3schools. Retrieved January 8, 2025, from https://www.w3schools.com/css/css_list.asp 
+
+    --> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSD 340 Web Development with HTML and CSS</title>
+    <link rel="stylesheet" href="Figueroa_Mod12_2.css">
+    <script>
+        let books = [
+            "The Pragmatic Programmer",
+            "The Curious Writer",
+            "100 Things Every Designer Needs to Know About People",
+            "Graphic Design the New Basics",
+            "Starting Out with Python",
+            "The Martian",
+            "Introduction to Java Programming and Data Structures",
+            "HTML and CSS",
+            "SQL in 10 Minutes a Day, Sams Teach Yourself",
+            "MySQL Explained"
+        ];
+
+        function displayBooks(order) {
+            let sortedBooks = order === 'asc' ? [...books] : [...books].reverse();
+            let bookList = document.getElementById("book-list");
+            bookList.innerHTML = "";
+            sortedBooks.forEach(book => {
+                let li = document.createElement("li");
+                li.textContent = book;
+                bookList.appendChild(li);
+            });
+        }
+
+        window.onload = function() {
+            displayBooks('asc');
+        };
+    </script>
+</head>
+<body>
+    <div id="container">
+        <h1>Assignment 12.2: JavaScript - Part 4</h1>
+        <div class="side-by-side">
+            
+            <div class="left">
+        <h3>Top 10 Favorite Books</h3>
+        <ol id="book-list"></ol>
+
+        <button onclick="displayBooks('asc')">Top to Bottom</button>
+        <button onclick="displayBooks('desc')">Bottom to Top</button>
+                   </div>
+        
+            <div class="right">
+                <ul>
+                     <h3>5 Things I’ve Learned Since the Course Started</h3>
+                    <li>CSS styles can be applied externally in a separate file, allowing for consistent styling across multiple pages, or internally within an HTML document for page-specific styling.</li>
+                    <li>People scan screens based on past experiences and expectations.</li>
+                    <li>There's a special part of the brain just for recognizing faces.</li>
+                    <li>People see cues that tell them what to do with an object.</li>
+                    <li>People identify objects by recognizing patterns.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="last">
+            <a href="../index.html">Back to Landing Page</a>
+        </div>
+    </div>
+</body>
+</html>

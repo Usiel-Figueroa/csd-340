@@ -1,0 +1,73 @@
+/* Center the title */
+h1 {
+    text-align: center;
+}
+
+/* Side-by-side divs */
+.side-by-side {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Left and right divs with 45% width */
+.left, .right {
+    width: 45%;
+}
+
+/* Last div with 100% width and margin-top */
+.last {
+    width: 100%;
+    margin-top: 40%;
+    text-align: center;
+}
+
+/* Style for h3 */
+h3 {
+    font-weight: 500;
+}
+
+/* Style for ordered and unordered lists */
+ol, ul {
+    padding: 10px;
+    margin: 0;
+}
+
+/* Ordered list with red border, rounded corners, and padding */
+ol {
+    border: 1px solid red;
+    border-radius: 15px;
+    list-style-position: inside;
+    padding: 10px;
+}
+
+/* Unordered list with dashed red border, rounded corners, and padding */
+ul {
+    border: 1px dashed red;
+    border-radius: 15px;
+    list-style-type: upper-roman;
+    list-style-position: inside;
+    padding: 10px;
+}
+
+/* Link hover effect */
+a:hover {
+    text-decoration: underline;
+}
+
+/* Float the last div to the right and add margin */
+.last {
+    float: center;
+    margin-bottom: 20px;
+}
+
+button {
+    background-color: #963131;
+    color: white;
+    padding: 10px 20px;
+    border: dashed;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);;
+    
+}
